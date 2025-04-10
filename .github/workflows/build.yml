@@ -27,9 +27,9 @@ jobs:
     - name: Build with Gradle
       run: cd Demo && ./gradlew build
     - name: Generate APK
-      run: ./Demo/gradlew assembleDebug
+      run: ./Demo/gradlew assembleRelease
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: app-debug.apk
-        path: ./Demo/app/build/outputs/apk/debug/app-debug.apk
+        name: app-release.apk
+        path: ./Demo/app/build/outputs/apk/release/app-release.apk
