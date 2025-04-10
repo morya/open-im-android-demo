@@ -23,9 +23,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x ./Demo/gradlew
     # - name: Build OUIKit dependencies
-    #   run: ./Demo/gradlew -p ./OUIKit build
+    #   run: cd Demo && ./Demo/gradlew -p ./OUIKit build
     - name: Build with Gradle
-      run: ./Demo/gradlew build
+      run: cd Demo && ./gradlew build
     - name: Generate APK
       run: ./Demo/gradlew assembleDebug
     - name: Upload APK
