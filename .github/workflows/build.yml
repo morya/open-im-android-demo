@@ -22,8 +22,8 @@ jobs:
         cache: gradle
     - name: Grant execute permission for gradlew
       run: chmod +x ./Demo/gradlew
-    - name: Build OUIKit dependencies
-      run: ./Demo/gradlew -p ./OUIKit build
+    # - name: Build OUIKit dependencies
+    #   run: ./Demo/gradlew -p ./OUIKit build
     - name: Build with Gradle
       run: ./Demo/gradlew build
     - name: Generate APK
